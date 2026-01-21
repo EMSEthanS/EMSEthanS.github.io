@@ -14,6 +14,26 @@ body {
     color: #333;
 }
 
+/* --- Dark Theme Styles (For About Page) --- */
+body.dark-theme {
+    background-color: #121212; /* Deep Charcoal */
+    color: #e0e0e0;            /* Soft White */
+}
+
+body.dark-theme header {
+    border-bottom: 2px solid #444;
+}
+
+body.dark-theme nav a {
+    color: #4da6ff;            /* Brighter blue for visibility */
+}
+
+body.dark-theme footer {
+    border-top: 1px solid #444;
+    color: #999;
+}
+
+/* --- Standard Newsletter Styles --- */
 header {
     border-bottom: 2px solid #333;
     padding-bottom: 20px;
@@ -35,7 +55,6 @@ nav a {
     text-decoration: none;
 }
 
-/* Post list requirements [cite: 26, 27, 28, 29] */
 .post-list {
     list-style: none;
 }
