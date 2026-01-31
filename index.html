@@ -27,23 +27,23 @@
             margin-bottom: 40px;
             padding-bottom: 20px;
         }
-        h1 {
-            color: #2c3e50;
-            font-size: 2.8em;
-            margin: 0;
-        }
-        .tagline {
-            color: #7f8c8d;
-            font-style: italic;
-            font-size: 1.2em;
-        }
+        h1 { color: #2c3e50; font-size: 2.8em; margin: 0; }
+        .tagline { color: #7f8c8d; font-style: italic; font-size: 1.2em; }
+        
+        /* Link Styling */
+        a { text-decoration: none; color: inherit; display: block; }
+        
         .featured-article {
             background-color: #f9f9fb;
             padding: 25px;
             border-radius: 8px;
             border-left: 8px solid #2980b9;
             margin-bottom: 40px;
+            transition: background 0.3s;
         }
+        .featured-article:hover { background-color: #f0f7fd; }
+        .featured-article h2 { color: #2980b9; margin: 0 0 10px 0; }
+
         .archive-section {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -53,22 +53,16 @@
             border: 1px solid #ddd;
             padding: 15px;
             border-radius: 5px;
-            transition: transform 0.2s;
+            transition: all 0.2s;
         }
         .archive-card:hover {
             transform: translateY(-5px);
+            border-color: #2980b9;
             box-shadow: 0 5px 10px rgba(0,0,0,0.05);
         }
-        h2, h3 {
-            color: #2c3e50;
-            margin-top: 0;
-        }
-        .date-label {
-            font-size: 0.85em;
-            color: #95a5a6;
-            display: block;
-            margin-bottom: 10px;
-        }
+        .archive-card h3 { color: #2c3e50; margin-bottom: 5px; }
+        .date-label { font-size: 0.85em; color: #95a5a6; margin-bottom: 10px; display: block; }
+
         footer {
             margin-top: 50px;
             padding-top: 20px;
@@ -76,11 +70,8 @@
             text-align: center;
             font-size: 0.9em;
         }
-        .github-link {
-            color: #2980b9;
-            text-decoration: none;
-            font-weight: bold;
-        }
+        .github-link { color: #2980b9; font-weight: bold; display: inline; }
+
         @media (max-width: 600px) {
             .archive-section { grid-template-columns: 1fr; }
         }
@@ -94,35 +85,40 @@
         <p class="tagline">The latest in AI, Tech, and Global Events</p>
     </header>
 
-    <div class="featured-article">
-        <span class="date-label">January 30, 2026</span>
-        <h2>Grok: Key Notes and History Up to Now</h2>
-        <p>A deep dive into xAI's real-time chatbot, its rapid developmental trajectory on X, and the notable incidents that have defined its "rebellious" personality...</p>
-        <p><em>Full article included in current issue content.</em></p>
-    </div>
+    <a href="grok-history.html">
+        <div class="featured-article">
+            <span class="date-label">January 30, 2026</span>
+            <h2>Grok: Key Notes and History Up to Now</h2>
+            <p>A deep dive into xAI's real-time chatbot, its rapid developmental trajectory on X, and the notable incidents that have defined its "rebellious" personality...</p>
+            <p><strong>Click to read the full report &rarr;</strong></p>
+        </div>
+    </a>
 
     <h3>Past Reports</h3>
     <div class="archive-section">
-        <div class="archive-card">
-            <span class="date-label">Recent</span>
+        <a href="pretti-incident.html" class="archive-card">
+            <span class="date-label">January 2026</span>
             <h3>Alex Pretti: ICU Nurse Fatally Shot</h3>
             <p>Details regarding the incident involving ICE Federal Agents.</p>
-        </div>
-        <div class="archive-card">
-            <span class="date-label">Tech & Gaming</span>
+        </a>
+
+        <a href="steam-machines.html" class="archive-card">
+            <span class="date-label">January 2026</span>
             <h3>Valve’s Living Room Return</h3>
             <p>Leaked prices for the new "Steam Machine" stir the hardware community.</p>
-        </div>
-        <div class="archive-card">
-            <span class="date-label">Geopolitical</span>
+        </a>
+
+        <a href="maduro-raid.html" class="archive-card">
+            <span class="date-label">January 2026</span>
             <h3>Operation Absolute Resolve</h3>
             <p>U.S. Special Forces capture Nicolás Maduro in Caracas raid.</p>
-        </div>
-        <div class="archive-card">
-            <span class="date-label">Domestic News</span>
+        </a>
+
+        <a href="minneapolis-shooting.html" class="archive-card">
+            <span class="date-label">January 2026</span>
             <h3>Minneapolis Reeling</h3>
             <p>Federal agent fatally shoots observer during immigration operation.</p>
-        </div>
+        </a>
     </div>
 
     <footer>
