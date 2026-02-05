@@ -1,4 +1,8 @@
-/* Using CSS Variables for consistency */
+/* CAH 205 Project: Staying informed with me A.I.nd you
+   Author: Ethan Stonecipher
+   GitHub: EMSEthanS
+*/
+
 :root {
     --bg-main: #0f172a;       /* Deep Slate */
     --bg-card: #1e293b;       /* Lighter Slate for cards */
@@ -8,6 +12,7 @@
     --spacing: 1.5rem;
 }
 
+/* Global Reset & Base Styles */
 body {
     background-color: var(--bg-main);
     color: var(--text-primary);
@@ -15,12 +20,17 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
+/* Header & Typography Hierarchy */
 header {
     max-width: 800px;
     margin: 0 auto 4rem auto;
-    text-align: left; /* Modern look often favors left-aligned titles */
+    text-align: left;
+    width: 100%;
 }
 
 h1 {
@@ -28,34 +38,40 @@ h1 {
     font-weight: 800;
     letter-spacing: -0.02em;
     margin-bottom: 0.5rem;
+    color: var(--text-primary);
 }
 
 header p {
     color: var(--text-muted);
-    font-size: 1rem;
+    font-size: 0.9rem;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.15em;
+    margin: 0;
 }
 
-/* Using a Grid for a consistent layout */
+/* Main Content Layout */
 main {
     max-width: 800px;
     margin: 0 auto;
     display: grid;
     gap: var(--spacing);
+    width: 100%;
+    flex: 1; /* Pushes footer to bottom if content is short */
 }
 
+/* Article Card Styles */
 .article {
     background-color: var(--bg-card);
-    border: 1px solid rgba(255, 255, 255, 0.05); /* Subtle border for definition */
+    border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 12px;
     padding: var(--spacing);
-    transition: transform 0.2s ease, border-color 0.2s ease;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .article:hover {
     transform: translateY(-4px);
     border-color: var(--accent);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .article h2 {
@@ -69,8 +85,33 @@ main {
     font-weight: 600;
 }
 
+.article h2 a:hover {
+    color: var(--accent);
+}
+
 .article p {
     color: var(--text-muted);
     margin: 0;
     font-size: 0.95rem;
+}
+
+/* Footer Styles (Middle Aligned) */
+footer {
+    text-align: center;
+    margin-top: 5rem;
+    padding: 2rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    width: 100%;
+}
+
+footer a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
