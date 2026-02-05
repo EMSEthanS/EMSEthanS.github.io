@@ -56,7 +56,7 @@ main {
     display: grid;
     gap: var(--spacing);
     width: 100%;
-    flex: 1; /* Pushes footer to bottom if content is short */
+    flex: 1; 
 }
 
 /* Article Card Styles */
@@ -74,25 +74,31 @@ main {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* Updated Headline Presentation */
 .article h2 {
-    margin: 0 0 0.5rem 0;
-    font-size: 1.25rem;
+    margin: 0 0 0.75rem 0; 
+    font-size: 1.6rem;      /* Larger and more presentable */
+    line-height: 1.2;
 }
 
 .article h2 a {
     color: var(--text-primary);
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;       /* Extra bold for hierarchy */
+    transition: color 0.2s ease;
 }
 
 .article h2 a:hover {
     color: var(--accent);
 }
 
+/* Updated Description Presentation */
 .article p {
     color: var(--text-muted);
     margin: 0;
-    font-size: 0.95rem;
+    font-size: 1.05rem;     
+    font-style: italic;     /* Italicized for distinction */
+    letter-spacing: 0.01em;
 }
 
 /* Footer Styles (Middle Aligned) */
