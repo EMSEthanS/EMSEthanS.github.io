@@ -77,6 +77,15 @@
         </div>
     </div>
 </main>
+
+<footer>
+    <div class="theme-switch-wrapper">
+    <button id="theme-toggle" aria-label="Toggle light/dark mode">
+        Switch to Light Mode
+    </button>
+</div>
+    <p>&copy; 2026 Ethan Stonecipher | GitHub: EMSEthanS</p>
+</footer>
 <script>
     const toggleBtn = document.getElementById('theme-toggle');
     const root = document.documentElement;
@@ -102,14 +111,5 @@
         toggleBtn.textContent = newTheme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode';
     });
 </script>
-<footer>
-    <div class="theme-switch-wrapper">
-    <button id="theme-toggle" aria-label="Toggle light/dark mode">
-        Switch to Light Mode
-    </button>
-</div>
-    <p>&copy; 2026 Ethan Stonecipher | GitHub: EMSEthanS</p>
-</footer>
-
 </body>
 </html>
