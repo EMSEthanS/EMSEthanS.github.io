@@ -60,8 +60,37 @@
 </main>
 
 <footer>
+    <div class="theme-switch-wrapper">
+    <button id="theme-toggle" aria-label="Toggle light/dark mode">
+        Switch to Light Mode
+    </button>
+</div>
     <p>&copy; 2026 Ethan Stonecipher | GitHub: EMSEthanS</p>
 </footer>
+<script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    const root = document.documentElement;
 
+    // 1. Check for saved theme in local storage, default to 'dark'
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    root.setAttribute('data-theme', savedTheme);
+    
+    // Set initial button text
+    if (toggleBtn) {
+        toggleBtn.textContent = savedTheme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+    }
+
+    // 2. Add the click event listener
+    toggleBtn.addEventListener('click', () => {
+        let currentTheme = root.getAttribute('data-theme');
+        let newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        root.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        
+        // Update button text
+        toggleBtn.textContent = newTheme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+    });
+</script>
 </body>
 </html>
