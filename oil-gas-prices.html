@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>An Oily-slope: tracking Oil and Gas prices in the last decade | Staying informed with me A.I.nd you</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Staying informed with me A.I.nd you</h1>
+    <p>March 3, 2026</p>
+    <nav>
+        <a href="index.html">Home</a> | 
+        <a href="about.html">About Me</a>
+    </nav>
+</header>
+
+<main>
+    <article class="article-container">
+        <h2>An Oily-slope: tracking Oil and Gas prices in the last decade</h2>
+        
+        <section>
+            <h3>The Decade of Volatility: Tracking Oil and Gas Prices from 2017 to 2026</h3>
+            <p>The last nine years have seen the energy market transform from a period of relative stability into a rollercoaster of historic highs and "impossible" lows. From the first Trump administration through the Biden years and into the current geopolitical crisis of 2026, energy prices have remained the primary barometer for global stability.</p>
+        </section>
+
+        <section>
+            <h3>The First Trump Term: Stability and the 2020 Crash (2017–2020)</h3>
+            <p>When Donald Trump first took office in January 2017, gas prices averaged around $2.35 per gallon. For the next three years, prices remained largely range-bound between $2.40 and $2.80, supported by a massive surge in U.S. shale production that turned the United States into the world's leading oil producer.</p>
+            <p><strong>The 2020 Pivot:</strong> The COVID-19 pandemic caused a literal collapse of the market. In April 2020, as global travel ground to a halt, oil futures briefly turned negative (-$37 per barrel) for the first time in history.</p>
+            <p><strong>The Result:</strong> By the end of 2020, gas prices fell to a national average of $2.17, with some states seeing prices well below $2.00.</p>
+        </section>
+
+        <section>
+            <h3>The Biden Era: The Post-Pandemic Spike (2021–2024)</h3>
+            <p>As the world reopened in 2021, demand for fuel skyrocketed faster than production could keep up. This era was defined by supply chain bottlenecks and significant geopolitical shifts.</p>
+            <p><strong>The Ukraine Invasion (2022):</strong> The most significant spike in modern history occurred in June 2022, following Russia’s invasion of Ukraine and subsequent sanctions on Russian energy. The national average hit an all-time record of $5.01 per gallon.</p>
+            <p><strong>The Correction (2023–2024):</strong> Prices began a long, jagged decline as the U.S. released millions of barrels from the Strategic Petroleum Reserve (SPR) and domestic production hit new records. By late 2024, gas prices had stabilized around $3.20–$3.30.</p>
+        </section>
+
+        <section>
+            <h3>The Second Trump Term: The "Golden Era" Meets "Epic Fury" (2025–2026)</h3>
+            <p>Upon returning to office in January 2025, the Trump administration moved quickly to deregulate the energy sector, ending the "Biden LNG export ban" and opening new federal lands for drilling.</p>
+            <p><strong>2025 Decline:</strong> For most of 2025, gas prices trended downward, reaching a three-year low of $2.81 per gallon in January 2026. The administration touted these numbers as a return to "energy dominance."</p>
+            <p><strong>The 2026 Crisis:</strong> Everything changed on February 28, 2026. Following the start of Operation Epic Fury and the death of Iran's Supreme Leader, the energy markets suffered a massive shock.</p>
+            <p><strong>The Current Spike:</strong> As of today, March 3, 2026, Brent crude has spiked to over $81 per barrel (a 13% jump in some markets) due to Iranian retaliatory strikes on shipping routes and refineries in the Persian Gulf. Retail gas prices have immediately reacted, jumping nearly 11 cents in a single week to a national average of $3.11.</p>
+        </section>
+
+        <footer class="article-sources">
+            <p><em>Final Note: While 2025 was projected to be a year of record-low energy costs, the current military escalation in the Middle East has reintroduced a "war premium" that threatens to undo a year's worth of downward trending prices.</em></p>
+        </footer>
+    </article>
+</main>
+
+<footer>
+    <div class="theme-switch-wrapper">
+        <button id="theme-toggle" aria-label="Toggle light/dark mode">
+            Switch to Light Mode
+        </button>
+    </div>
+    <p>&copy; 2026 Ethan Stonecipher | GitHub: EMSEthanS</p>
+</footer>
+
+<script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    const root = document.documentElement;
+
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    root.setAttribute('data-theme', savedTheme);
+    
+    if (toggleBtn) {
+        toggleBtn.textContent = savedTheme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+    }
+
+    toggleBtn.addEventListener('click', () => {
+        let currentTheme = root.getAttribute('data-theme');
+        let newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        root.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        
+        toggleBtn.textContent = newTheme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+    });
+</script>
+</body>
+</html>
