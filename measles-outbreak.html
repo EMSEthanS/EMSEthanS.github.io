@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Measles comeback, what we know</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Staying informed with me A.I.nd you</h1>
+    <nav>
+        <a href="index.html">Home</a> | 
+        <a href="about.html">About Me</a>
+    </nav>
+</header>
+
+<main>
+    <article>
+        <h2>Measles comeback, what we know</h2>
+        <p><strong>Date:</strong> March 3, 2026</p>
+        
+        <p>Public health officials are sounding the alarm as the United States navigates its most significant measles crisis in decades. According to data from the Centers for Disease Control and Prevention (CDC), 2025 marked a severe turning point, with case counts reaching their highest levels since 1992. The momentum has continued into early 2026, with over 1,100 cases already confirmed in the first two months of this year alone.</p>
+
+        <h3>The Numbers: 2025 – 2026 At a Glance</h3>
+        <p>The scale of the current outbreak has fundamentally challenged the U.S. "measles-free" elimination status, which the country has held since 2000.</p>
+
+        <h3>Major Outbreak Centers</h3>
+        <p>While measles has been reported in 45 jurisdictions over the last year, three specific regions emerged as the primary drivers:</p>
+        <ul>
+            <li><strong>West Texas (The 2025 Epicenter):</strong> The largest single outbreak occurred in Gaines County and surrounding areas. It resulted in 762 cases and two tragic deaths—an unvaccinated school-aged child and an 8-year-old girl. This outbreak was primarily concentrated in close-knit Mennonite communities with low vaccination rates and was eventually declared over in August 2025.</li>
+            <li><strong>South Carolina (The 2026 Hotspot):</strong> As of March 2026, South Carolina is the nation's current "hotspot." The Spartanburg County area has seen cases balloon to 990, leading to widespread exposure notices at churches, grocery stores (Costco, Walmart), and schools.</li>
+            <li><strong>New Mexico:</strong> Closely linked to the West Texas surge, New Mexico reported an outbreak that included the death of an unvaccinated adult, bringing the 2025 national death toll to three.</li>
+        </ul>
+
+        <h3>Key Figures & Responses</h3>
+        <p><strong>Dr. Mandy Cohen (CDC Director):</strong> Has spearheaded the national response, highlighting that the 95% vaccination threshold required for "herd immunity" has slipped. National coverage among kindergartners dropped to 92.7% in the 2023–2024 school year.</p>
+        <p><strong>Katherine Wells (Lubbock Public Health Director):</strong> Managed the ground-level response for the West Texas outbreak, coordinating with local hospitals like Covenant Children’s, where several children required intubation due to measles-related pneumonia.</p>
+        <p><strong>Dr. Sanchi Malhotra (UCLA Mattel Children’s Hospital):</strong> Has been a vocal expert on the "multifactorial" nature of the rise, citing pandemic-related service interruptions and growing vaccine skepticism.</p>
+
+        <h3>The Context: Why the Surge?</h3>
+        <p>Experts attribute the resurgence to three main factors:</p>
+        <ul>
+            <li><strong>Immunity Gaps:</strong> Roughly 280,000 kindergartners entered school last year without protection, creating "pockets" of susceptibility.</li>
+            <li><strong>Contagion Factor:</strong> Measles is roughly six times more contagious than COVID-19. One infected person can spread the virus to 18 others in an unvaccinated group.</li>
+            <li><strong>Global Travel:</strong> While many cases are now spreading domestically, initial seeds were planted by travelers returning from Canada, Vietnam, and Mexico, where transmission remains high.</li>
+        </ul>
+
+        <p>This information was gathered and verified using reporting from the <strong>Centers for Disease Control and Prevention (CDC)</strong>, the <strong>South Carolina Department of Public Health</strong>, <strong>The BMJ</strong>, and <strong>CBS News</strong>.</p>
+
+        <p>And they can do that with me A.I.nd you.</p>
+
+    </article>
+</main>
+
+<footer>
+    <div class="theme-switch-wrapper">
+        <button id="theme-toggle" aria-label="Toggle light/dark mode">
+            Switch to Light Mode
+        </button>
+    </div>
+    <p>&copy; 2026 Ethan Stonecipher | GitHub: EMSEthanS</p>
+</footer>
+
+<script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    const root = document.documentElement;
+
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    root.setAttribute('data-theme', savedTheme);
+    
+    if (toggleBtn) {
+        toggleBtn.textContent = savedTheme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+    }
+
+    toggleBtn.addEventListener('click', () => {
+        let currentTheme = root.getAttribute('data-theme');
+        let newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        root.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        
+        toggleBtn.textContent = newTheme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+    });
+</script>
+</body>
+</html>
