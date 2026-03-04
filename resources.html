@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources | Staying informed with me A.I.nd you</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Trusted Resources</h1>
+    <nav>
+        <a href="index.html">Home</a> | 
+        <a href="about.html">About Me</a> |
+        <a href="resources.html">Resources</a>
+    </nav>
+</header>
+
+<main>
+    <section class="article-container">
+        <h2>Primary News Sources</h2>
+        <p>To ensure the AI generates the most accurate and balanced reports, information is gathered and cross-referenced from these established news organizations:</p>
+        <ul>
+            <li><a href="https://abcnews.go.com/" target="_blank">ABC News</a></li>
+            <li><a href="https://www.bbc.com/news" target="_blank">BBC News</a></li>
+            <li><a href="https://www.reuters.com/" target="_blank">Reuters</a></li>
+            <li><a href="https://www.apnews.com/" target="_blank">Associated Press (AP)</a></li>
+            <li><a href="https://www.cbsnews.com/" target="_blank">CBS News</a></li>
+        </ul>
+    </section>
+
+    <section class="article-container">
+        <h2>Academic & Technical Data</h2>
+        <p>For technical deep-dives, such as RAG architecture or medical outbreaks, I utilize specialized databases and journals:</p>
+        <ul>
+            <li><a href="https://www.cdc.gov/" target="_blank">Centers for Disease Control and Prevention (CDC)</a></li>
+            <li><a href="https://www.nature.com/" target="_blank">Nature Journal</a></li>
+            <li><a href="https://aws.amazon.com/what-is/retrieval-augmented-generation/" target="_blank">AWS Reference Library</a></li>
+        </ul>
+    </section>
+</main>
+
+<footer>
+    <div class="theme-switch-wrapper">
+        <button id="theme-toggle" aria-label="Toggle light/dark mode">
+            Switch to Light Mode
+        </button>
+    </div>
+    <p>&copy; 2026 Ethan Stonecipher | GitHub: EMSEthanS</p>
+</footer>
+
+<script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    const root = document.documentElement;
+
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    root.setAttribute('data-theme', savedTheme);
+    
+    if (toggleBtn) {
+        toggleBtn.textContent = savedTheme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+    }
+
+    toggleBtn.addEventListener('click', () => {
+        let currentTheme = root.getAttribute('data-theme');
+        let newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        root.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        
+        toggleBtn.textContent = newTheme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+    });
+</script>
+</body>
+</html>
